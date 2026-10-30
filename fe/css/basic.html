@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css 내부 스타일 시트 방식 -->
+    <style>
+        /* css 작성 영역 */
+        /* html > head > style */
+        h1 {color: red;}
+
+    </style>
+
+    <!-- 외부 스타일 시트 방식-->
+     <!-- 외부 css 파일 연결 -->
+      <link rel="stylesheet" href="basic.css">
+      <!-- <link rel="stylesheet" href="..(뒤로)/1(다른 폴더)/2.css(대상 파일)"> -->
+
+      <!-- 
+       주석 단축키 
+       ctrl + /
+       ctrl + k + c 
+       alt + shift + a 
+       -->
+
+</head>
+<body>
+<!-- body 화면에 표시되는 내용을 작성하는 영역 -->
+ <!-- 각종 html 태그가 작성되는 영역 -->
+
+    <h1>박 민 지</h1>
+
+    <!-- 인라인 스타일 방식 (우선 적용) >> 내부 스타일 시트 방식 (기본 적용) -->
+    <h1 style="color: blue;">텁 지</h1> 
+    <h1 style="color: green;">앰 생 지</h1>
+
+    <h2 style="color:darkturquoise;">정 보 석</h2>
+    
+    <!-- 
+    내부 스타일 시트 vs 외부 스타일 시트 
+    같은 선택자 레벨 + 같은 속성 → 적용 순서 기준으로 나중속성이 적용
+     -->
+    <h3>앰 생 석</h3>
+    <h4>핵 추 석</h4>
+
+    <h5>김 유 겸</h5>
+
+</body>
+</html>
