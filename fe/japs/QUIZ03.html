@@ -6,29 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    <form>  
+<form action="http://www.naver.com">
     <label for="user-id">사용자 ID :</label>
     <input type="text" id="user-id"><br>
     <label for="password">비밀번호 :</label>
     <input type="password" id="password"> <button type="button">완료</button><br><br>
-    <select id="food" name="food">
+    
+    <select id="food" name="food">  
     <option value="jjajang">짜장면</option>
     <option value="jjamppong" selected>짬뽕</option>
     <option value="tangsuyuk">탕수육</option>
-</select><br>
+</select>
 <label>짜장면<input type="checkbox" id="jjajang"></label>
 <label for="jjamppong">짬뽕<input type="checkbox" id="jjamppong" checked></label>
 <label for="tangsuyuk">탕수육<input type="checkbox" id="tangsuyuk"></label><br>
+
 <label for="name">이름 :</label>
     <input type="text" id="name"><br>
     <label for="password1">암호 :</label>
     <input type="password" id="password1"><br>
+
     <label for="Resume">자소서 :</label>
     <textarea id="Resume" name="Resume"
           rows="5" cols="20"
           placeholder="이곳에 자기소개서 작성"></textarea><br><br>
+
     <label for="search">검색 :</label>
-    <input type="text" id="search"> <button type="button">Q1</button> <button type="button">Q2</button><br>    
+    <input type="text" id="search"> <button type="button">Q1</button> <input type="button" value="Q2"><br>    
     <label for="submit">submit 버튼 :</label> <button type="submit">전송1</button> <button type="submit">전송2</button><br>
     <label for="reset">reset 버튼 :</label> <button type="reset">리셋1</button> <button type="reset">리셋2</button><br>
     </form>
