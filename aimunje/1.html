@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>미래 IT 아카데미</h1>
+    <p>수강신청서</p>
+    <form>
+    <label for="name">이름:</label>
+    <input type="text" id="name" placeholder="이름을 입력하세요"><br><br>
+    <label for="edu">희망 교육과정:</label>
+    <select id="edu">
+        <option selected disabled>과정을 선택하세요</option>
+        <option value="web">파이썬 기초</option>
+        <option value="app">HTML/CSS</option>
+        <option value="data">Git/Github</option>
+    </select>
+    <br><br>
+    <label for="time">시간:</label>
+    <input type="radio" id="time1" name="time" value="morning">
+    <label for="time1">오전반</label>
+    <input type="radio" id="time2" name="time" value="afternoon">
+    <label for="time2">오후반</label>
+    <br><br>
+    <label for="request">문의사항:</label>
+    <textarea id="request" name="request" rows="5" cols="40" placeholder="궁금한 내용을 입력하세요"></textarea><br><br>
+    <input type="checkbox" id="terms" name="terms">
+    <label for="terms">개인정보 수집 및 이용에 동의합니다.</label><br><br>
+    <input type="submit" value="신청하기">
+    </form>
+</body>
+</html>
