@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0; /* 외부 여백 0 */
+            padding: 0; /* 내부 여백 0 */
+            box-sizing: border-box; /* 박스모델 사이즈 지정, border까지 사이즈로 인식 */
+        }
+
+        .item {
+            width: 100px;
+            padding: 100px;
+            border: 1px solid black;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            /* 주축정렬 */
+            justify-content: space-between;
+
+            /* 교차축 정렬 */
+            align-items: center;
+            /* align-content: center; */
+            height: 400px;
+            background-color: lightblue;
+        }
+        .contaent-center{
+        /* text-align: center; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item" content-center>3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
