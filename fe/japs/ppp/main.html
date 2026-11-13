@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* 게시판 전체 */
+        .ctn {
+            width: 1100px;
+            max-width: 95%;
+            margin: 30px auto;
+        }
+
+        /* 게시판 제목 */
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* 게시글 목록 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        /* 표의 칸 */
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        /* 표 머리글 */
+        th {
+            background-color: #f1efef;
+        }
+
+        /* 제목과 작성자 왼쪽 정렬 */
+        .post-title {
+            text-align: left;
+        }
+
+        .post-author {
+            text-align: left;
+        }
+
+        /* 게시글 번호 */
+        .post-number {
+            color: #777;
+            margin-right: 15px;
+        }
+
+        /* 글쓰기 버튼 */
+        .btn-area {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 페이지 번호 */
+        .page {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .page span {
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .page .active {
+            background-color: #444;
+            color: white;
+        }
+        .hit{
+            background-color: rgb(174, 0, 255);
+            color: #bfdf0c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ctn">
+        <table>
+            <colgroup>
+                <col style="width: 70%;"> <!-- 제목 -->
+                <col style="width: 15%;"> <!-- 작성자 -->
+                <col style="width: 15%;">  <!-- 작성일 -->
+                <col style="width: 10%;">  <!-- 조회수 -->
+                <col style="width: 10%;">  <!-- 좋아요 -->
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                    <th>좋아요</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="post-title">
+                        <span class="post-number">22</span>
+                        안녕하세요!
+                    </td>
+                    <td class="post-author">김보민</td>
+                    <td>2026-11-12</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td class="post-title">
+                        <span class="post-number">21</span>
+                        HTML 공부 중입니다
+                    </td>
+                    <td class="post-author">김보석</td>
+                    <td>2026-11-12</td>
+                    <td>12</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="post-title">
+                        <span class="post-number">20</span>
+                        자유게시판 테스트
+                    </td>
+                    <td class="post-author">김유겸</td>
+                    <td>2026-11-11</td>
+                    <td>25</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td class="post-title">
+                        <span class="post-number">19</span>
+                        오늘 슬펐어요
+                    </td>
+                    <td class="post-author">지준서</td>
+                    <td>2026-11-10</td>
+                    <td>63</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td class="post-title">
+                        <span class="post-number">18</span>
+                        <span class="hit">Hit</span> 오늘자 천안 시내버스 ㄹㅈㄷ ㅋㅋㅋㅋ
+                    </td>
+                    <td class="post-author">한유성</td>
+                    <td>2026-11-09</td>
+                    <td>2335</td>
+                    <td>12</td>
+                    <tr>
+                    <td class="post-title">
+                        <span class="post-number">17</span>
+                        저 실력이 별로인가봐여..
+                    </td>
+                    <td class="post-author">박재영</td>
+                    <td>2026-11-07</td>
+                    <td>56</td>
+                    <td>2</td>
+                </tr>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page">
+            <span class="active">1</span>
+            <span>2</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
