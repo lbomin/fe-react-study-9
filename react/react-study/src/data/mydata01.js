@@ -6,3 +6,5 @@ let menu3 = '라면';
 let menus = menu1 + menu2 + menu3;
 
 export default menus;
+
+export {menu1, menu3};
