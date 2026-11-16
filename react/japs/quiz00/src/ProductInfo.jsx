@@ -1,6 +1,6 @@
 import { product1, product2, product3, price1, price2, price3 } from "./productData";
 import pddp from "./productData";
-import { shopAddress, shopName, shopPhone } from "./Quiz00/shopData";
+import { shopAddress, shopName, shopPhone } from "./shopData";
 
 const Pdi = ()=>{
     return(
