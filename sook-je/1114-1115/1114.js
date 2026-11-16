@@ -60,24 +60,57 @@ console.log(sum);
 // });
 
 // 문제 17. [for문]
-// let numbers = [10, 25, 30, 45, 50];
+let numbers = [10, 25, 30, 45, 50];
 // 배열에서 30보다 큰 값의 개수를 구하여 출력하세요.
+for (let i of numbers){
+     if(i>30){
+         console.log(i);
+     }
+ }
 
+console.log('-----------');
 // 문제 18. [for...of]
-// let numbers = [5, 12, 8, 20, 3, 15];
+ let numbers1 = [5, 12, 8, 20, 3, 15];
+ let max = numbers1[0];
 // 배열에서 가장 큰 값을 찾아 출력하세요.
+for (const num of numbers1){
+     if(num>max){
+         max = num;
+     }
+ }
+console.log(max);
 
+console.log('-----------');
 // 문제 19. [forEach]
-// let scores = [90, 75, 60, 85, 100];
+let scores = [90, 75, 60, 85, 100];
 // 각 점수가 60점 이상이면 '합격', 그렇지 않으면 '불합격'을 출력하세요.
+scores.forEach(i1=>{
+     if(i1>=60){
+        console.log('합격');
+     } else {
+        console.log('불합격');
+     }
+ });
 
+console.log('-----------');
 // 문제 20. [for문]
-// let numbers = [2, 4, 6, 8, 10];
+let numbers2 = [2, 4, 6, 8, 10];
 // 각 요소의 값을 3배로 변경한 후 배열 전체를 출력하세요.
+for (const i2 of numbers2){
+    i3=i2*3
+    console.log(i3);
+ }
 
+console.log('-----------');
 // 문제 21. [for문]
-// let numbers = [10, 20, 30, 40, 50];
+let numbers3 = [10, 20, 30, 40, 50];
 // 값이 30인 요소의 인덱스를 찾아 출력하세요.
+for (let i4 = 0; i4 < numbers3.length; i4++) {
+    if (numbers3[i4] == 30) {
+        console.log(i4);
+        break;
+    }
+}
 
 // 문제 22. [for...in]
 // let scores = [50, 80, 90, 40, 100];
