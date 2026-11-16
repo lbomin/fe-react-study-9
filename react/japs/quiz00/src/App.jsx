@@ -3,16 +3,14 @@
   import reactLogo from './assets/react.svg'
   import viteLogo from './assets/vite.svg'
   import './App.css'
-  import nn from "./quiz/Quiz01/Quiz01.js";
-  import './quiz/Quiz01/Quiz01.css'
+  import Quiz01 from './quiz/Quiz01/Quiz01.jsx'
 
   function App() {
     const [number, setNumber] = useState(0);
 
     return (
         <div>
-            <button onClick={() => setNumber(nn())}>다음 숫자</button>
-            <span className='red'>{number}</span>
+          <Quiz01/>
         </div>
     );
 }
