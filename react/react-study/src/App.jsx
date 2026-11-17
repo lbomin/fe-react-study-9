@@ -9,6 +9,7 @@ import Export01 from './components/Export01'
 import State02 from './components/State02'
 import State03 from './components/State03'
 import Props01 from './components/Props01'
+import Props02 from './components/Props02'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,8 @@ function App() {
     // <Export01/>
     // <State02/>
     // <State03/>
-    <Props01/>
+    // <Props01/>
+    <Props02/>
   )
 }
 
