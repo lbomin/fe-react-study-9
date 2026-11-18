@@ -13,6 +13,7 @@ import Props02 from './components/Props02'
 import Q3 from '../quiz/quiz03/Q3'
 import Q3A from '../quiz/quiz03/Q3A'
 import NewsBlog from './newsblog/NewsBlog'
+import Q4 from '../quiz/quiz04/Q4'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,7 +28,8 @@ function App() {
     // <Props02/>
     // <Q3/>
     // <Q3A/>
-    <NewsBlog/>
+    <Q4/>
+    // <NewsBlog/>
   )
 }
 
