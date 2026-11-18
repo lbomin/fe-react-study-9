@@ -30,8 +30,8 @@ function App() {
     // <Q3/>
     // <Q3A/>
     // <Q4/>
-    <Q5/>
-    // <NewsBlog/>
+    // <Q5/>
+    <NewsBlog/>
   )
 }
 
