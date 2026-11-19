@@ -55,6 +55,19 @@ export default function NewsBlog() {
                                 setLikeCountArr(temp);  //재렌더링 조건 충족
                             }}>♥</span> {likeCountArr[index]}</h4>
                             <p>내용</p>
+                            <button onClick={() => {
+                                let front_news = news.slice(0, index);
+                                let back_news = news.slice(index + 1);
+                                let result_news = [...front_news, ...back_news];
+                                let likes = [
+                                    ...likeCountArr.slice(0, index),
+                                    ...likeCountArr.slice(index + 1)
+                                ];
+                                setNews(result_news);
+                                setLikeCountArr(likes);
+                            }}>
+                                삭제
+                            </button>
                         </div>
                     )
                 })
@@ -172,7 +185,7 @@ export default function NewsBlog() {
                     setNews(temp);
                     
                     let temp2 = [...likeCountArr];
-                    likeCountArr.push(0);
+                    temp2.push(0);
                     setLikeCountArr(temp2);
 
                     setInputText(''); // 입력값 저장하는 inputText state변수의 값을 초기화 (clean)
