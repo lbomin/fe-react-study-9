@@ -2,15 +2,15 @@ import "./NewsBlog.css";
 import { useState } from "react";
 import Modal from "./Modal";
 
-function NewsBlog() {
+export default function NewsBlog() {
 
     //제목  잘 바뀌지 않는 내용
     // 하드코딩(텍스트가 직접 작성되어있는) vs 일반변수 vs State변수
     let title = "Blog Header";
 
-    let [news1, setNews1] = useState("어제의 뉴스");
-    let [news2, setNews2] = useState("오늘의 뉴스");
-    let [news3, setNews3] = useState("내일의 뉴스");
+    // let [news1, setNews1] = useState("어제의 뉴스");
+    // let [news2, setNews2] = useState("오늘의 뉴스");
+    // let [news3, setNews3] = useState("내일의 뉴스");
 
     let [news, setNews] = useState(["어제의 뉴스", "오늘의 뉴스", "내일의 뉴스"]);
     //       5           10              1
@@ -30,7 +30,6 @@ function NewsBlog() {
     // input 요소에서 입력된 값을 저장하는 용도
     let [inputText, setInputText] = useState('');
 
-
     return (
         <div>
             <div className="black-nav">
@@ -39,12 +38,10 @@ function NewsBlog() {
                 <div style={{ color: "orange", fontSize: "20px" }}>React Study</div>
             </div>
 
-
-
             {
                 news.map((item, index) => {
                     return (
-                        <div className="post-list">
+                        <div className="post-list" key={index}>
                             <h4 onClick={() => {
                                 
                                 setSelectedTitle(item); //제목전달
@@ -70,11 +67,6 @@ function NewsBlog() {
                     setNews(temp);
                 }}>긴급제목변경</button>
             </div>
-
-
-
-
-
 
             {/* <div className="post-list">
                 <h4 onClick={()=>{
@@ -136,7 +128,7 @@ function NewsBlog() {
                     // event.target 이벤트가 발생한 요소 접근
 
                     //input 창에서 입력 발생 -> onChange 이벤트에 등록된 함수 수행 -> value값을 state변수에 저장해둠
-
+                    
                     console.log(event.target.value);
                     setInputText(event.target.value);
 
@@ -152,9 +144,36 @@ function NewsBlog() {
                     */
 
                     // input에서 입력되어 저장된 state값 -> news배열에 추가등록 -> 재렌더링+화면에표시
+
+                    // 사전 필터링 패턴
+
+                    // 문자 앞뒤에 있는 공백제거
+                    // 띄어쓰기만 있을때 등록을 방지
+                    // trim()   : 문자열 앞뒤에 있는 공백 제거
+
+                    // " abcd ".trim() ---> "abcd"
+
+                    // 공백제거
+                    inputText = inputText.trim();
+
+                    if(inputText===''){
+                        alert('뉴스 제목을 입력해주세요.');
+                        setInputText('');
+                        return;
+                    }
+
+                    if (inputText.includes('김보석')) {
+                        alert('뉴스 제목에 바보석은 언급금지입니다!!!!');
+                        return;
+                    }
+
                     let temp = [...news];
                     temp.push(inputText);
                     setNews(temp);
+                    
+                    let temp2 = [...likeCountArr];
+                    likeCountArr.push(0);
+                    setLikeCountArr(temp2);
 
                     setInputText(''); // 입력값 저장하는 inputText state변수의 값을 초기화 (clean)
 
@@ -170,9 +189,5 @@ function NewsBlog() {
                                     news={news} setNews={setNews} bgColor="lightblue" />
             }
 
-
         </div>
-    )
-}
-
-export default NewsBlog;
+)}
