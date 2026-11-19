@@ -15,6 +15,7 @@ import Q3A from '../quiz/quiz03/Q3A'
 import NewsBlog from './newsblog/NewsBlog'
 import Q4 from '../quiz/quiz04/Q4'
 import Q5 from '../quiz/quiz05/Q5'
+import FoodMarket from './foodmarket/FoodMarket'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,7 +32,8 @@ function App() {
     // <Q3A/>
     // <Q4/>
     // <Q5/>
-    <NewsBlog/>
+    // <NewsBlog/>
+    <FoodMarket/>
   )
 }
 
