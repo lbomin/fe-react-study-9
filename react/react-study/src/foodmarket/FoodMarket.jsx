@@ -20,6 +20,7 @@ import { useState } from "react";
 import {Routes, Route, useNavigate, Link } from 'react-router';
 import CustomerServise from "./pages/CustomerServise";
 import Home from "./pages/Home";
+import Detail from "./pages/detail";
 
 function FoodMarket() {
 
@@ -63,6 +64,7 @@ function FoodMarket() {
             <Routes>
                 <Route path="/" element={<Home foods={foods}/>}/>
                 <Route path="/help" element={<CustomerServise/>}/>
+                <Route path="/detail/:id" element={<Detail foods={foods}/>}/>
                 <Route path="/detail" element={<div><h1>김보석 디테일</h1></div>}/>
                 <Route path="/info" element={<div><h1>김보석 정보</h1></div>}/>
                 <Route path="/test" element={<div><h1>김보석 바보</h1></div>}/>
