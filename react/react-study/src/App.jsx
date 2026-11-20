@@ -33,9 +33,9 @@ function App() {
     // <Q3A/>
     // <Q4/>
     // <Q5/>
-    <Q6/>
+    // <Q6/>
     // <NewsBlog/>
-    // <FoodMarket/>
+    <FoodMarket/>
   )
 }
 

@@ -36,8 +36,8 @@ let foodsData = [
     },
     {
         id: "fd005",
-        title: "이름 모를 음식",
-        content: "보긴 많이 봤는데",
+        title: '시금치 크림 펜네',
+        content: '시금치와 채소가 어우러진 크림 파스타',
         price: 13000,
         imgPath: "images/food5.jpg",
         stockCount: 3
